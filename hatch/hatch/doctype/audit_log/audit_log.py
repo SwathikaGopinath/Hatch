@@ -1,11 +1,9 @@
 # Copyright (c) 2026, Swathika Gopinath and contributors
 # For license information, please see license.txt
 
-import frappe
+# import frappe
 from frappe.model.document import Document
 
 
-class BookingAddonEntry(Document):
-
-    def validate(self):
-        self.amount = self.rate * self.quantity
+class AuditLog(Document):
+	pass

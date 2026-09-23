@@ -4,7 +4,15 @@ app_publisher = "Swathika Gopinath"
 app_description = "A custom Frappe app for a shared-desk business that\'s outgrown a shared spreadsheet"
 app_email = "swathikagopinath0609@gmail.com"
 app_license = "mit"
+after_install = "hatch.install.after_install"
 
+doc_events = {
+    "*": {
+        "on_update": "hatch.audit.log_action",
+        "on_submit": "hatch.audit.log_action",
+        "on_cancel": "hatch.audit.log_action",
+    }
+}
 # Apps
 # ------------------
 
@@ -124,6 +132,11 @@ app_license = "mit"
 
 # Permissions
 # -----------
+
+permission_query_conditions = {
+    "Booking": "hatch.api.booking_permission_query",
+}
+
 # Permissions evaluated in scripted ways
 
 # permission_query_conditions = {
