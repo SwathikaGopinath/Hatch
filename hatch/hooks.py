@@ -13,6 +13,12 @@ doc_events = {
         "on_cancel": "hatch.audit.log_action",
     }
 }
+scheduler_events = {
+    "hourly": [
+        "hatch.tasks.hourly",
+        "hatch.api.release_expired_holds"
+    ],
+}
 # Apps
 # ------------------
 
@@ -162,15 +168,15 @@ permission_query_conditions = {
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
+#scheduler_events = {
 # 	"all": [
 # 		"hatch.tasks.all"
 # 	],
 # 	"daily": [
 # 		"hatch.tasks.daily"
 # 	],
-# 	"hourly": [
-# 		"hatch.tasks.hourly"
+ #	"hourly": [
+#		"hatch.tasks.hourly"
 # 	],
 # 	"weekly": [
 # 		"hatch.tasks.weekly"

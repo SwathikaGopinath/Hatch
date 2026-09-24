@@ -87,3 +87,6 @@ class Booking(Document):
         )
     def on_update(self):
         pass
+#Summary in booking form
+    def before_print(self, print_settings=None):
+        self.print_summary = f"{self.member} - {self.resource} on {self.booking_date}"
