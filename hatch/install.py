@@ -2,7 +2,7 @@ import frappe
 
 
 def after_install():
-    # Create default Resources if they don't exist
+  
     default_resources = [
         "Room A",
         "Room B",
@@ -19,7 +19,6 @@ def after_install():
                 "hourly_rate": 500
             }).insert(ignore_permissions=True)
 
-    # Create default Hatch Settings if it doesn't exist
     if not frappe.db.exists("Hatch Settings"):
         frappe.get_doc({
             "doctype": "Hatch Settings",

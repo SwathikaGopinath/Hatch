@@ -45,13 +45,14 @@
    "fieldname": "allowed",
    "fieldtype": "Table MultiSelect",
    "label": "Allowed Resource Types",
-   "options": "Membership Plan Resource Type"
+   "options": "Membership Plan Resource Type",
+   "reqd": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-09-22 18:45:12.421972",
+ "modified": "2026-09-25 10:51:44.347932",
  "modified_by": "Administrator",
  "module": "Hatch",
  "name": "Membership Plan",
